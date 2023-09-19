@@ -1,5 +1,5 @@
 ## ML PROJECT
 
-Description of ML project goes here: 
+Description of ML project goes here:
 
-Dataset used: 
+Dataset used: TBD
