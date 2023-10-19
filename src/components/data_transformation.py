@@ -59,6 +59,12 @@ class DataTransformation:
         try: 
             train_df = pd.read_csv(train_path)
             test_df = pd.read_csv(test_path)
+            # drop NaN rows 
+            train_df = train_df.dropna()
+            test_df = test_df.dropna()
+
+            train_df["num"] = train_df["num"].map({0 : 0, 1 : 1, 2 : 1, 3 : 1, 4 : 1})
+            test_df["num"] = test_df["num"].map({0 : 0, 1 : 1, 2 : 1, 3 : 1, 4 : 1})
             logging.info("successfully read train and test data")
             logging.info("Getting preprocessing object")
 
@@ -82,7 +88,7 @@ class DataTransformation:
             # (combines arrays that have the same number of rows)
             train_array = np.c_[input_feature_train_arr, np.array(target_feature_train_df)]
             test_array = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
-
+        
             save_object(self.data_transformation_config.preprocessor_obj_file_path,
                         preprocessor_obj
             )
