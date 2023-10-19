@@ -45,7 +45,7 @@ class ModelTrainer:
                 "Logistic Regression" : LogisticRegression(penalty = "l2", solver = "liblinear"), 
                 "KNN" : KNeighborsClassifier(n_neighbors = 7), 
                 "Decision Tree" : DecisionTreeClassifier(max_depth = 5), 
-                "SVM" : SVC(kernel = "rbf")
+                "SVM" : SVC(kernel = "linear")
             }
 
             model_report:dict = evaluate_models(X_train, y_train, X_test, y_test, models)

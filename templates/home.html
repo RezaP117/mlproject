@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="home.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <main id="main">
+      <h1>Heart Disease Predictor</h1>
+      <div class="container">
+        <h1 class="pad">Healthcare Data Input</h1>
+        <form>
+          <div class="form_group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" />
+          </div>
+          <div class="form_group">
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex">
+              <!-- Initial empty option -->
+              <option value="">Select a gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="form_group">
+            <label for="dataset">Dataset:</label>
+            <select id="dataset" name="dataset">
+              <!-- Initial empty option -->
+              <option value="">Select a dataset</option>
+              <option value="Cleveland">Cleveland</option>
+              <option value="Hungary">Hungary</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="VA Long Beach">VA Long Beach</option>
+            </select>
+          </div>
+          <div class="form_group">
+            <label for="chestpain">Chest Pain:</label>
+            <select id="chestpain" name="chestpain">
+              <!-- Initial empty option -->
+              <option value="">Select type of Chest Pain</option>
+              <option value="typical angina">typical angina</option>
+              <option value="asymptomatic">asymptomatic</option>
+              <option value="non-anginal">non-anginal</option>
+              <option value="atypical angina">atypical angina</option>
+            </select>
+          </div>
+          <div class="form_group">
+            <label for="trestbps">Resting Blood Pressure:</label>
+            <input type="number" id="trestbps" name="trestbps" />
+          </div>
+          <div class="form_group">
+            <label for="chol">Cholesterol:</label>
+            <input type="number" id="chol" name="cholesterol" />
+          </div>
+          <div class="form_group">
+            <label for="fbs">Fasting Blood Sugar:</label>
+            <select id="fbs" name="fbs">
+              <!-- Initial empty option -->
+              <option value="">Select fbs</option>
+              <option value="fbs_true">True</option>
+              <option value="fbs_false">False</option>
+            </select>
+          </div>
+          <div class="form_group">
+            <label for="restecg">Electrodiographic Results:</label>
+            <select id="restecg" name="restecg">
+              <!-- Initial empty option -->
+              <option value="">Select a result</option>
+              <option value="lv_hypertrophy">lv hypertrophy</option>
+              <option value="normal">normal</option>
+              <option value="st-t_abnormality">st-t abnormality</option>
+            </select>
+          </div>
+          <div class="form_group">
+            <label for="thalch">Max heart rate:</label>
+            <input type="number" id="thalch" name="thalch" />
+          </div>
+          <div class="form_group">
+            <label for="exang">Exercise Induced Angina:</label>
+            <select id="exang" name="exang">
+              <!-- Initial empty option -->
+              <option value="">Select exang</option>
+              <option value="exang_true">True</option>
+              <option value="exang_false">False</option>
+            </select>
+          </div>
+          <div class="form_group">
+            <label for="oldpeak">ST Depression Value:</label>
+            <input type="number" id="oldpeak" name="oldpeak" />
+          </div>
+          <div class="form_group">
+            <label for="slope">Slope of ST Segment:</label>
+            <select id="slope" name="slope">
+              <!-- Initial empty option -->
+              <option value="">Select a slope</option>
+              <option value="flat">Flat</option>
+              <option value="upsloping">Upsloping</option>
+              <option value="downsloping">Downsloping</option>
+            </select>
+          </div>
+          <div class="form_group">
+            <label for="ca"
+              >Number of major vessels (0-3) colored by fluoroscopy:</label
+            >
+            <input type="number" id="ca" name="ca" />
+          </div>
+          <div class="form_group">
+            <label for="thal">Thalassemia Level:</label>
+            <select id="thal" name="thal">
+              <!-- Initial empty option -->
+              <option value="">Select a Thalassemia Level:</option>
+              <option value="thal_normal">Normal</option>
+              <option value="thal_reversable">Reversable</option>
+              <option value="thal_fixed_defect">Fixed Defect</option>
+            </select>
+          </div>
+          <!-- Add more input fields and labels here -->
+          <div class="form_group">
+            <button class="button" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
