@@ -75,9 +75,19 @@ class DataTransformation:
             logging.info(f"obtained preprocessor object {preprocessor_obj}")
             input_feature_train_df = train_df.drop(columns = [target_col_name, non_important_col], axis = 1)
             target_feature_train_df = train_df[target_col_name]
+            # changing fbs and exang to strings to avoid errors when using .transform on user input 
+            '''
+            X["fbs"] = X["fbs"].astype(str)
+            X["exang"] = X["exang"].astype(str)
+            '''
+            input_feature_train_df["fbs"] = input_feature_train_df["fbs"].astype(str)
+            input_feature_train_df["exang"] = input_feature_train_df["exang"].astype(str)
 
             input_feature_test_df = test_df.drop(columns = [target_col_name, non_important_col], axis = 1)
             target_feature_test_df = test_df[target_col_name]
+
+            input_feature_test_df["fbs"] = input_feature_test_df["fbs"].astype(str)
+            input_feature_test_df["exang"] = input_feature_test_df["exang"].astype(str)
 
             logging.info("Applying preprocessing object on train and test data")
             # using preprocessor on training and testing dataframes 

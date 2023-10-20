@@ -8,7 +8,7 @@ body {
   margin: 0px;
   padding: 0px;
   text-align: center;
-  background-color: aqua;
+  background: linear-gradient(to bottom, lime, aqua, teal);
 }
 
 main#main {
@@ -47,4 +47,24 @@ button.button:hover {
 button.button:active {
   transform: scale(0.95); /* Slightly reduce the button size on click */
   box-shadow: none; /* Remove the box shadow on click */
+}
+
+/* Style the select element */
+select {
+  width: 200px; /* Adjust the width as needed */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2; /* Background color */
+  color: #333; /* Text color */
+}
+
+/* Style the input element */
+input {
+  width: 200px; /* Adjust the width as needed */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2; /* Background color */
+  color: #333; /* Text color */
 }

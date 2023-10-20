@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="home.css" />
+    <link rel="stylesheet" type="text/css" href="../static/home.css" />
     <title>Document</title>
   </head>
   <body>
@@ -13,7 +13,8 @@
       <h1>Heart Disease Predictor</h1>
       <div class="container">
         <h1 class="pad">Healthcare Data Input</h1>
-        <form>
+        <!-- action specified where this form data is sent to -->
+        <form action="{{url_for ('predict_datapoint')}}" method="POST">
           <div class="form_group">
             <label for="age">Age:</label>
             <input type="number" id="age" name="age" />
@@ -23,8 +24,8 @@
             <select id="sex" name="sex">
               <!-- Initial empty option -->
               <option value="">Select a gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
             </select>
           </div>
           <div class="form_group">
@@ -34,13 +35,14 @@
               <option value="">Select a dataset</option>
               <option value="Cleveland">Cleveland</option>
               <option value="Hungary">Hungary</option>
-              <option value="Switzerland">Switzerland</option>
+              <!-- when dropping all rows with NaNs all rows with Switzerland get removed -->
+              <!-- <option value="Switzerland">Switzerland</option> -->
               <option value="VA Long Beach">VA Long Beach</option>
             </select>
           </div>
           <div class="form_group">
-            <label for="chestpain">Chest Pain:</label>
-            <select id="chestpain" name="chestpain">
+            <label for="cp">Chest Pain:</label>
+            <select id="cp" name="cp">
               <!-- Initial empty option -->
               <option value="">Select type of Chest Pain</option>
               <option value="typical angina">typical angina</option>
@@ -62,8 +64,8 @@
             <select id="fbs" name="fbs">
               <!-- Initial empty option -->
               <option value="">Select fbs</option>
-              <option value="fbs_true">True</option>
-              <option value="fbs_false">False</option>
+              <option value="True">True</option>
+              <option value="False">False</option>
             </select>
           </div>
           <div class="form_group">
@@ -71,9 +73,9 @@
             <select id="restecg" name="restecg">
               <!-- Initial empty option -->
               <option value="">Select a result</option>
-              <option value="lv_hypertrophy">lv hypertrophy</option>
+              <option value="lv hypertrophy">lv hypertrophy</option>
               <option value="normal">normal</option>
-              <option value="st-t_abnormality">st-t abnormality</option>
+              <option value="st-t abnormality">st-t abnormality</option>
             </select>
           </div>
           <div class="form_group">
@@ -85,13 +87,13 @@
             <select id="exang" name="exang">
               <!-- Initial empty option -->
               <option value="">Select exang</option>
-              <option value="exang_true">True</option>
-              <option value="exang_false">False</option>
+              <option value="True">True</option>
+              <option value="False">False</option>
             </select>
           </div>
           <div class="form_group">
             <label for="oldpeak">ST Depression Value:</label>
-            <input type="number" id="oldpeak" name="oldpeak" />
+            <input type="number" step="any" id="oldpeak" name="oldpeak" />
           </div>
           <div class="form_group">
             <label for="slope">Slope of ST Segment:</label>
@@ -114,9 +116,9 @@
             <select id="thal" name="thal">
               <!-- Initial empty option -->
               <option value="">Select a Thalassemia Level:</option>
-              <option value="thal_normal">Normal</option>
-              <option value="thal_reversable">Reversable</option>
-              <option value="thal_fixed_defect">Fixed Defect</option>
+              <option value="normal">Normal</option>
+              <option value="reversable defect">Reversable</option>
+              <option value="fixed defect">Fixed Defect</option>
             </select>
           </div>
           <!-- Add more input fields and labels here -->
@@ -124,6 +126,9 @@
             <button class="button" type="submit">Submit</button>
           </div>
         </form>
+        <div>
+          <h2>The result is {{result}}</h2>
+        </div>
       </div>
     </main>
   </body>
