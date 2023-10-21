@@ -38,9 +38,6 @@ def predict_datapoint():
         ca = int(request.form.get("ca"))
         thal = request.form.get("thal")
         logging.info("Successfully obtained user input from HTML page")
-        mylist = [age, sex, dataset, cp, trestbps, chol, fbs, restecg, thalch, exang, oldpeak, slope, ca, thal]
-        for i in mylist:
-            logging.info(i)
         data = CustomData(age, sex, dataset, cp, trestbps, 
                           chol, fbs, restecg, thalch, exang, oldpeak, slope, ca, thal)
         pred_df = data.get_data_as_frame()

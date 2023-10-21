@@ -1,0 +1,45 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: gray;
+  width: 100%;
+}
+
+main.container {
+  text-align: center;
+}
+
+/* Style the submit button */
+button.button {
+  background-color: lightgray; /* Background color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding for space around the text */
+  border: none; /* Remove the default button border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Show a hand cursor on hover */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a box shadow */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect */
+button.button:hover {
+  background-color: aquamarine; /* Darker background color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Active (clicked) state */
+button.button:active {
+  transform: scale(0.95); /* Slightly reduce the button size on click */
+  box-shadow: none; /* Remove the box shadow on click */
+}
+
+h1 {
+  margin-top: 30px;
+}
+h1.bigspace {
+  margin-bottom: 100px;
+}
