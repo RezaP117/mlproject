@@ -127,9 +127,13 @@
           </div>
         </form>
         <div>
-          <h2>The result is {{result}}</h2>
+          <!-- <h2 id="result_container">Result Displayed Here: {{result}}</h2> -->
+          <h2 id="result_container" data-result="{{result}}">
+            Result will appear here
+          </h2>
         </div>
       </div>
     </main>
   </body>
+  <script src="../static/home.js"></script>
 </html>

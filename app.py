@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template 
+from flask import Flask, request, render_template, jsonify 
 import numpy as np
 import pandas as pd 
 from sklearn.preprocessing import StandardScaler
@@ -47,6 +47,8 @@ def predict_datapoint():
         predict_pipeline = PredictionPipeline()
         result = predict_pipeline.predict(pred_df)
         return render_template("home.html", result = result[0])
+        #return jsonify(result = result[0])
+
     
 if __name__ == "__main__":
     app.run(host = "0.0.0.0", debug = True)
