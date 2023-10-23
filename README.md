@@ -9,7 +9,8 @@ Folders:
 2. src -> components -> contains modules for reading and processing data
 3. notebook -> data -> contains ipynb files for EDA/Model Training and Training Dataset 
 4. templates -> contains HTML files 
-5. static -> contains CSS files 
+5. static -> contains CSS files
+6. artifact contains model and preprocessor .pkl files 
 
 To Run: 
 1. Open Terminal 
