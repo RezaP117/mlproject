@@ -1,8 +1,8 @@
 ## ML PROJECT
 
-Description of ML project goes here:
+Description of ML project goes here: Be able to accurately predict if a patient has heart disease 
 
-Dataset used: TBD
+Dataset used: https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data/data
 
 Folders:
 1. src -> contains project files
