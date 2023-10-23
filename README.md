@@ -10,7 +10,7 @@ Folders:
 3. notebook -> data -> contains ipynb files for EDA/Model Training and Training Dataset 
 4. templates -> contains HTML files 
 5. static -> contains CSS files
-6. artifact contains model and preprocessor .pkl files 
+6. artifact contains model and preprocessor .pkl files, and all datasets used for model training and testing  
 
 To Run: 
 1. Open Terminal 
