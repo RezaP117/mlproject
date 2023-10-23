@@ -13,7 +13,7 @@ Folders:
 
 To Run: 
 1. Open Terminal 
-2. Clone repo 
+2. Clone repo -> git clone https://github.com/RezaP117/mlproject.git
 3. Install packages if not already on your machine -> pip install -r requirements.txt in terminal 
 4. Start running -> Python app.py in terminal 
 5. A Flask App is created and the root directory page is located at -> http://127.0.0.1:5000
