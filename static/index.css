@@ -37,12 +37,17 @@ main.container {
 button.button {
   background-color: lightgray; /* Background color */
   color: #fff; /* Text color */
-  padding: 10px 20px; /* Padding for space around the text */
+  padding: 10px 50px; /* Padding for space around the text */
   border: none; /* Remove the default button border */
   border-radius: 4px; /* Rounded corners */
   cursor: pointer; /* Show a hand cursor on hover */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a box shadow */
   transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+a {
+  text-decoration: none;
+  font-family: Arial, sans-serif;
 }
 
 /* Hover effect */
