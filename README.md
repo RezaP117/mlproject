@@ -1,6 +1,6 @@
 ## ML PROJECT
 
-Description of ML project goes here: Be able to accurately predict if a patient has heart disease 
+Problem Statement: Be able to accurately predict if a patient has heart disease 
 
 Dataset used: https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data/data
 
