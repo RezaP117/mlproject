@@ -6,9 +6,13 @@ Dataset used: TBD
 
 Folders:
 src -> contains project files
+
 src -> components -> contains modules for reading and processing data
+
 notebook -> data -> contains ipynb files for EDA/Model Training and Training Dataset 
+
 templates -> contains HTML files 
+
 static -> contains CSS files 
 
 To Run: 
