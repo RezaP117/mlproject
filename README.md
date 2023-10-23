@@ -12,6 +12,12 @@ Folders:
 5. static -> contains CSS files 
 
 To Run: 
-1. In cmd line -> Python app.py
-2. Go to main host address: http://127.0.0.1:5000
-3. Click on predict data
+1. Open Terminal 
+2. Clone repo 
+3. Install packages if not already on your machine -> pip install -r requirements.txt in terminal 
+4. Start running -> Python app.py in terminal 
+5. A Flask App is created and the root directory page is located at -> http://127.0.0.1:5000
+6. Click on predict data -> This will take you to http://127.0.0.1:5000/predictdata
+7. Input the data into the required fields and click submit
+8. Heart Disease result will be displayed at the bottom of the page after it refreshes
+9. 0.0 means no heart disease, 1.0 means heart disease 
