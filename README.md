@@ -8,9 +8,9 @@ Folders:
 
 1. src -> contains project files
 2. src -> components -> contains modules for reading and processing data
-3. notebook -> data -> contains ipynb files for EDA/Model Training and Training Dataset
+3. notebook -> data -> contains ipynb files for EDA/Model Training and Dataset used
 4. templates -> contains HTML files
-5. static -> contains CSS files
+5. static -> contains CSS and JS files
 6. artifact -> contains model and preprocessor .pkl files, and all datasets used for model training and testing
 
 To Run:
