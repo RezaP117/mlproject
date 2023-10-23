@@ -9,10 +9,9 @@ var result = resultElement.getAttribute("data-result");
 function updateHtml(result) {
   // Check the result value and update the element accordingly
   if (result === "0.0") {
-    resultElement.innerText = "You do not have heart disease";
+    resultElement.innerText = `Result ${result}. You do not have heart disease`;
   } else if (result === "1.0") {
-    resultElement.innerText =
-      "You likely have heart disease, consult your physician";
+    resultElement.innerText = `Result: ${result}. You likely have heart disease, consult your physician`;
   }
 }
 

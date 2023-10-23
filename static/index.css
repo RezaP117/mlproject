@@ -27,22 +27,67 @@ header.header {
   image-rendering: -webkit-optimize-contrast;
 
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  position: relative;
 }
 
 main.container {
   text-align: center;
 }
 
-/* Style the submit button */
-button.button {
-  background-color: lightgray; /* Background color */
-  color: #fff; /* Text color */
-  padding: 10px 50px; /* Padding for space around the text */
-  border: none; /* Remove the default button border */
-  border-radius: 4px; /* Rounded corners */
-  cursor: pointer; /* Show a hand cursor on hover */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a box shadow */
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+.button-link:link,
+.button-link:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 30px;
+  display: inline-block;
+  border-radius: 200px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.button-link:hover {
+  transform: translateY(-3px);
+  /* x shadow, y shadow, shadow blur, rgba */
+  box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.5);
+}
+
+.button-link:active {
+  transform: translateY(-1px);
+  box-shadow: 0px 5px 10px rgb(6, 207, 2, 0.7);
+}
+
+.button-white {
+  background-color: white;
+  color: gray;
+}
+
+/* after psuedoelement is treated like the child of the .button-link element */
+.button-link::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.button-white::after {
+  background-color: white;
+}
+
+.button-link:hover::after {
+  transform: scaleX(1.25) scaleY(1.5);
+  opacity: 0;
+}
+
+.button-animated {
+  animation: moveInBottom 0.5s ease-in-out 0.75s;
+  /* automatically applies the keyframe 0% properties BEFORE the animation starts */
+  animation-fill-mode: backwards;
 }
 
 a {
@@ -50,18 +95,93 @@ a {
   font-family: Arial, sans-serif;
 }
 
-/* Hover effect */
-button.button:hover {
-  background-color: aquamarine; /* Darker background color on hover */
-  transform: scale(1.05); /* Slightly enlarge the button on hover */
+.heading-primary {
+  color: lightgray;
+  text-transform: uppercase;
+  /* used for fixing bounce to top that happens in animations
+  fixes issue in google chrome but not firefox */
+  backface-visibility: hidden;
 }
 
-/* Active (clicked) state */
-button.button:active {
-  transform: scale(0.95); /* Slightly reduce the button size on click */
-  box-shadow: none; /* Remove the box shadow on click */
+.heading-primary-main {
+  display: block;
+  font-size: 30px;
+  font-weight: 200;
+  letter-spacing: 15px;
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
 }
 
-h1.bigspace {
-  margin-bottom: 100px;
+.heading-primary-sub {
+  display: block;
+  font-size: 35px;
+  font-weight: 250;
+  letter-spacing: 20px;
+  animation-name: moveInRight;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  margin-bottom: 20px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  /* center element after applying top/left */
+  transform: translate(-50%, -50%);
+}
+
+@keyframes moveInLeft {
+  /* initial state */
+  0% {
+    opacity: 0;
+    /* start shifted to the left when page is loaded */
+    transform: translateX(-100px);
+  }
+
+  /* used for "bounce" effect */
+  80% {
+    transform: translateX(10px);
+  }
+
+  /* end state */
+  100% {
+    opacity: 1;
+    /* translate back to middle of screen */
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveInRight {
+  /* initial state */
+  0% {
+    opacity: 0;
+    /* start shifted to the left when page is loaded */
+    transform: translateX(100px);
+  }
+
+  /* used for "bounce" effect */
+  80% {
+    transform: translateX(-10px);
+  }
+
+  /* end state */
+  100% {
+    opacity: 1;
+    /* translate back to middle of screen */
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
